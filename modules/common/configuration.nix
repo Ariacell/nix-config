@@ -24,4 +24,18 @@
   
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  programs.nix-ld.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    wget
+    fishPlugins.done
+    fishPlugins.fzf-fish
+    fishPlugins.forgit
+    fishPlugins.hydro
+    fzf
+    fishPlugins.grc
+    grc
+  ];
+
 }
