@@ -77,6 +77,14 @@
     
   };
 
+  programs.vim = {
+    enable = true;
+    settings = {
+      expandtab = true;
+      tabstop = 2;
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
