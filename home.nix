@@ -73,8 +73,7 @@
 
   programs.git = {
     enable = true;
-    userName = "ariacell";
-    
+    userName = "ariacell"; 
   };
 
   programs.vim = {

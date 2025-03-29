@@ -11,17 +11,19 @@
    pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-   nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-    specialArgs = {inherit inputs;};
-    modules = [
-      nixos-wsl.nixosModules.default
-          {
-            system.stateVersion = "24.11";
-            wsl.enable = true;
-          }
-     ./configuration.nix
-    ];
-   };
+    nixosConfigurations = {
+      wsl2 = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          nixos-wsl.nixosModules.default
+            {
+              system.stateVersion = "24.11";
+              wsl.enable = true;
+            }
+          ./configuration.nix
+        ];
+      };
+    };
   };
 
 }
