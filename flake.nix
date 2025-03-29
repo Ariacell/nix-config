@@ -15,13 +15,13 @@
       wsl2 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          #./hosts/wsl2/configuration.nix
-          #nixos-wsl.nixosModules.default
+          ./hosts/wsl2/configuration.nix
+          nixos-wsl.nixosModules.default
             {
               system.stateVersion = "24.11";
               wsl.enable = true;
             }
-          #./modules/common/configuration.nix
+          ./modules/common/configuration.nix
         ];
       };
     };

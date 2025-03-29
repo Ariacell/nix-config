@@ -11,7 +11,6 @@
   imports = [
     ./aria-user.nix
     ./home-manager.nix
-    ./home.nix
   ];
 
 
