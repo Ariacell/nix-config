@@ -11,12 +11,12 @@
   # Define the user
   users.users.ariacell = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [ "wheel" ];
     password = "";
   };
 
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   # Disable services that are not relevant in WSL
   services.openssh.enable = false;
