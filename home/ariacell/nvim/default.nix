@@ -14,12 +14,14 @@
   extraPackages = with pkgs; [
 
       tree-sitter
-      gcc
 
       # Language server packages (executables)
       pyright
       lua-language-server
-      clang
+      
+      # Deliberately not installing any c compilers in the home setup, prioritising shells
+      # clang
+      # gcc
     ];
 
 

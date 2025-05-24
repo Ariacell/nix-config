@@ -20,10 +20,10 @@
         packages.default = pkgs.hello;
       }) // {
         nixosConfigurations = {
-          my-host = nixpkgs.lib.nixosSystem {
+          acer = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/my-host/configuration.nix
+            ./hosts/acer/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

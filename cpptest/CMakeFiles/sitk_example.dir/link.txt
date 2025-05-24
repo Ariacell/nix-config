@@ -1,0 +1,1 @@
+/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/clang++ -Xlinker --dependency-file=CMakeFiles/sitk_example.dir/link.d CMakeFiles/sitk_example.dir/sitk_example.cxx.o -o sitk_example

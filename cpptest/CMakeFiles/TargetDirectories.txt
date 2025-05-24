@@ -1,0 +1,3 @@
+/home/ariacell/chatgpt-nix-config/cpptest/CMakeFiles/sitk_example.dir
+/home/ariacell/chatgpt-nix-config/cpptest/CMakeFiles/edit_cache.dir
+/home/ariacell/chatgpt-nix-config/cpptest/CMakeFiles/rebuild_cache.dir

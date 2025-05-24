@@ -12,19 +12,30 @@
         pkgs = import nixpkgs {
           inherit system;
         };
+        llvm = pkgs.llvmPackages_latest;
+        lib = nixpkgs.lib;
       in {
         devShells.default = pkgs.mkShell {
           name = "cpp-dev-shell";
 
-          buildInputs = [
-            pkgs.clang
-            pkgs.cmake
-            pkgs.gdb
-            pkgs.lldb
-            pkgs.cmake
-            pkgs.pkg-config
-            pkgs.gcc
+          buildInputs = with pkgs; [
+            # pkgs.clang
+            # pkgs.gdb
+            # pkgs.lldb
+            cmake
+            # pkgs.pkg-config
+            # pkgs.gcc
+            llvm.lldb
+            llvm.libllvm
+            llvm.libcxx
+            # llvm.clang
+            clang-tools
           ];
+
+          #          CPATH = builtins.concatStringsSep ":" [
+          #      (lib.makeSearchPathOutput "dev" "include" [ llvm.libcxx ])
+          #      (lib.makeSearchPath "resource-root/include" [ llvm.clang ])
+          #    ];
 
           shellHook = ''
             echo "Welcome to the C++ development environment!"
