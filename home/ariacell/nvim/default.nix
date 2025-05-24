@@ -8,9 +8,20 @@
 	vimAlias = true;
 	vimdiffAlias = true;
 
-    extraPackages = with pkgs; [ tree-sitter gcc ];
-
     withNodeJs = true; # Required for nvim-treesitter parser installation
+  
+
+  extraPackages = with pkgs; [
+
+      tree-sitter
+      gcc
+
+      # Language server packages (executables)
+      pyright
+      lua-language-server
+    ];
+
+
   };
 
   xdg.configFile."nvim/init.lua".source = ./init.lua;
