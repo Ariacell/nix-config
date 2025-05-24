@@ -19,6 +19,7 @@
       # Language server packages (executables)
       pyright
       lua-language-server
+      clang
     ];
 
 

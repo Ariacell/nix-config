@@ -3,7 +3,8 @@
 {
 imports = [
     ./nvim
-    ];
+    ./zsh
+  ];
     home.username = "ariacell";
   home.homeDirectory = "/home/ariacell";
 
