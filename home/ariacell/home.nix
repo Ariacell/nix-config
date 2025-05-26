@@ -87,6 +87,9 @@ imports = [
     # devenv things
     devbox
 
+    # c compiler for various baseline lua init and other toolchains
+    gcc
+
     #python
     uv
 

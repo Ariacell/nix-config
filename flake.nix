@@ -48,6 +48,22 @@
              inherit nixos-wsl;
             };
           };
+          razer14wsl2 = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+              nixos-wsl.nixosModules.wsl
+              ./hosts/razer14wsl2/configuration.nix
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.ariacell = import ./home/ariacell/home.nix;
+              }
+            ];
+            specialArgs = {
+             inherit nixos-wsl;
+            };
+          };
       };
 };
 }
