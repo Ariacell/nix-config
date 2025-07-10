@@ -69,6 +69,7 @@ imports = [
 
   home.packages = with pkgs; [
     #cli tools
+    wget
     git
     htop
     neofetch
