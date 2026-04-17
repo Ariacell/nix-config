@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 {
 
-  # Pull in additional system packages that we want for
-  environment.systemPackages = [
-    pkgs.ripgrep
-  ];
 
 
     programs.neovim = {
@@ -20,6 +16,8 @@
 
   extraPackages = with pkgs; [
 
+      # Pull in additional system packages that we want for nvim QoL
+      ripgrep
       tree-sitter
 
       # Language server packages (executables)
