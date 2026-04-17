@@ -1,5 +1,12 @@
 { config, pkgs, ... }:
 {
+
+  # Pull in additional system packages that we want for
+  environment.systemPackages = [
+    pkgs.ripgrep
+  ];
+
+
     programs.neovim = {
     enable = true;
     defaultEditor = true;
