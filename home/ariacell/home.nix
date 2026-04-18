@@ -8,7 +8,7 @@ imports = [
     home.username = "ariacell";
   home.homeDirectory = "/home/ariacell";
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
 
     programs = {
         # Enable Home Manager to manage your home directory.
@@ -67,6 +67,11 @@ imports = [
     };
   };
 
+
+  home.sessionVariables = {
+    _PR_AI_DISABLE=1; # Disable any potential ai features from pay-respects package across the board
+  };
+
   home.packages = with pkgs; [
     #cli tools
     wget
@@ -75,7 +80,9 @@ imports = [
     neofetch
     oh-my-zsh
     curl
-    thefuck
+    fd
+    # thefuck - This is no longer maintained it seems, trying pay-respects instead
+    pay-respects
     tldr
     zoxide # cd standin with some help
     fzf

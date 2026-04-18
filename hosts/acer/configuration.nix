@@ -4,7 +4,7 @@
   imports = [ ../../modules/common.nix ];
 
   networking.hostName = "acerLaptop";
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.11";
 
   # Define the user
   users.users.ariacell = {

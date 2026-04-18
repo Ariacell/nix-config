@@ -4,7 +4,7 @@
   imports = [ ../../modules/common.nix ];
 
   networking.hostName = "wsl2";
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.11";
   wsl.enable = true;
   wsl.defaultUser = "ariacell";
 

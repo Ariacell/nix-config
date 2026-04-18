@@ -17,6 +17,7 @@
   extraPackages = with pkgs; [
 
       # Pull in additional system packages that we want for nvim QoL
+      fd # usually installed by my personal user home if using home manager, but just in case
       ripgrep
       tree-sitter
 
