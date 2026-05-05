@@ -58,6 +58,9 @@ require("lazy").setup({
       vim.cmd.colorscheme("night-owl")
     end,
   },
-
+  -- Code completions via local ollama - https://github.com/tzachar/cmp-ai
+  --{'tzachar/cmp-ai', dependencies = 'nvim-lua/plenary.nvim'},
+  --  {'hrsh7th/nvim-cmp', dependencies = {'tzachar/cmp-ai'}},
 
 })
+

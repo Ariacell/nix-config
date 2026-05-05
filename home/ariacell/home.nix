@@ -6,10 +6,13 @@ imports = [
     ./zsh
   ];
     home.username = "ariacell";
-  home.homeDirectory = "/home/ariacell";
+    home.homeDirectory = "/home/ariacell";
 
-  home.stateVersion = "25.11";
-
+    home.stateVersion = "25.11";
+  services.ollama = {
+      enable = true;
+      acceleration = "cuda"; # or "rocm" / "none"
+    };
     programs = {
         # Enable Home Manager to manage your home directory.
     home-manager.enable = true;
@@ -100,6 +103,5 @@ imports = [
 
     #python
     uv
-
     ];
 }
